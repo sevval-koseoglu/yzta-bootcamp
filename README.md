@@ -97,167 +97,101 @@ Sprint 1 kapsamında hedeflenen temel özellikler:
 
 ---
 
-## Sprint 1
+# Sprint 1
 
-### Sprint Hedefi
+## Backlog düzeni ve Story seçimleri
 
-Sprint 1’in hedefi, Scam Message Detector projesinin temel repository yapısını kurmak, ürün fikrini belgelemek ve kullanıcıdan alınan mesaj metni üzerinden basit risk analizi yapabilen ilk prototipi geliştirmektir.
+Backlog'umuz Sprint 1 kapsamında öncelikli olarak yapılması gereken story'lere göre düzenlenmiştir. İlk sprintte amaç, ürünün temel yapısını kurmak ve kullanıcıdan alınan mesaj metni üzerinden basit bir risk analizi yapabilen ilk prototipi geliştirmektir.
 
----
+Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde story seçimleri yapılmıştır. Story başına çıkan tahmin puanı, toplam sprint puanının yarısından az tutulmuştur.
 
-### Sprint 1 Kapsamı
+Sprint 1 için seçilen story'ler aşağıdaki gibidir:
 
-Bu sprintte ürünün temel altyapısı ve ilk çalışan prototipi hedeflenmiştir.
+| No | Story                                                                                                                             | Tahmin Puanı | Öncelik |
+| -- | --------------------------------------------------------------------------------------------------------------------------------- | -----------: | ------- |
+| 1  | Kullanıcı olarak mesaj metni girmek istiyorum, böylece mesajın riskli olup olmadığını analiz edebilirim.                          |            3 | High    |
+| 2  | Kullanıcı olarak mesajdaki şüpheli linkleri görmek istiyorum, böylece linke tıklamadan önce riskleri anlayabilirim.               |            5 | High    |
+| 3  | Kullanıcı olarak mesaj için bir risk skoru görmek istiyorum, böylece mesajın ne kadar tehlikeli olabileceğini anlayabilirim.      |            5 | High    |
+| 4  | Kullanıcı olarak mesajın neden riskli olduğunu madde madde görmek istiyorum, böylece sonucu daha kolay anlayabilirim.             |            5 | High    |
+| 5  | Kullanıcı olarak güvenli aksiyon önerileri almak istiyorum, böylece şüpheli mesaj karşısında ne yapmam gerektiğini öğrenebilirim. |            2 | Medium  |
 
-Planlanan işler:
-
-* GitHub repository kurulumu
-* README dosyasının hazırlanması
-* Takım rollerinin belgelenmesi
-* Ürün fikri, hedef kitle ve backlog bilgilerinin eklenmesi
-* Streamlit arayüzünün oluşturulması
-* Kullanıcıdan mesaj metni alma ekranının hazırlanması
-* Link, telefon numarası, IBAN ve anahtar kelime tespiti için ilk analiz fonksiyonlarının yazılması
-* Basit risk skoru hesaplama yapısının oluşturulması
-* Örnek test mesajlarının hazırlanması
+Story'ler yapılacak işlere, yani task'lere bölünmüştür. Sprint 1 kapsamında belirlenen temel task'ler; repository yapısının oluşturulması, README dosyasının hazırlanması, Streamlit arayüzünün kurulması, mesaj giriş alanının oluşturulması, link/telefon/IBAN tespiti için regex yapısının hazırlanması ve temel risk skoru hesaplama fonksiyonunun geliştirilmesidir.
 
 ---
 
-## Sprint 1 Backlog
+## Daily Scrum
 
-| Görev                                                 | Sorumlu                      | Durum |
-| ----------------------------------------------------- | ---------------------------- | ----- |
-| Repository yapısını oluşturma                         | Developer Team               | To Do |
-| README.md dosyasının ilk sürümünü hazırlama           | Developer Team               | To Do |
-| Takım üyeleri ve rollerini belgeleme                  | Scrum Master                 | To Do |
-| Ürün fikri ve hedef kitleyi belgeleme                 | Product Owner                | To Do |
-| Product backlog hazırlama                             | Product Owner / Scrum Master | To Do |
-| Streamlit arayüzünü oluşturma                         | Developer Team               | To Do |
-| Mesaj giriş alanını geliştirme                        | Developer Team               | To Do |
-| Link, telefon ve IBAN tespiti için regex yapısı kurma | Developer Team               | To Do |
-| Risk skoru hesaplama fonksiyonunu geliştirme          | Developer Team               | To Do |
-| Örnek test mesajları hazırlama                        | Developer Team               | To Do |
+Daily Scrum toplantılarının ekip üyelerinin uygunluk durumuna göre çevrim içi olarak yapılmasına karar verilmiştir. Sprint 1 sürecinde ekip içi iletişim ağırlıklı olarak mesajlaşma kanalı üzerinden yürütülmüştür.
+
+Bu süreçte repository paylaşımı, Scrum Master ve Product Owner rollerinin belirlenmesi, ürün fikrinin netleştirilmesi, toplantı planlaması ve ekip bilgileri formu için gerekli bilgilerin toplanması gibi konular konuşulmuştur.
+
+Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştır:
+
+![Daily Scrum 1](ProjectManagement/Sprint1Documents/daily_1.png)
+![Daily Scrum 2](ProjectManagement/Sprint1Documents/daily_2.png)
 
 ---
 
-## Risk Analizinde Kullanılacak İlk Sinyaller
+## Sprint board update
 
-| Risk Sinyali     | Açıklama                                                               |
-| ---------------- | ---------------------------------------------------------------------- |
-| Link bulunması   | Mesaj içerisinde URL olup olmadığı kontrol edilir.                     |
-| Aciliyet ifadesi | "Hemen", "24 saat içinde", "son gün", "acil" gibi ifadeler aranır.     |
-| Ödeme talebi     | Para, ödeme, kart bilgisi veya IBAN isteyen ifadeler analiz edilir.    |
-| Kurum taklidi    | Banka, kargo, e-devlet, burs veya çekiliş gibi temalar kontrol edilir. |
-| Telefon numarası | Mesaj içerisinde telefon numarası bulunup bulunmadığı tespit edilir.   |
-| IBAN             | Mesaj içerisinde IBAN formatına benzeyen ifadeler aranır.              |
+Sprint board üzerinde Sprint 1 için seçilen story'ler ve task'ler takip edilmiştir. Görevler To Do, In Progress ve Done durumlarına göre düzenlenmiştir.
+
+Sprint board screenshotları:
+
+![Backlog 1](ProjectManagement/Sprint1Documents/backlog_1.png)
 
 ---
 
-## Proje Dosya Yapısı
+## Ürün Durumu
 
-```text
-scam-message-detector/
-│
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── app/
-│   ├── main.py
-│   ├── analyzer.py
-│   └── scoring.py
-│
-├── data/
-│   └── sample_messages.json
-│
-└── docs/
-    └── sprint_1.md
-```
+Sprint 1 kapsamında ürünün tamamlanmış sürümü değil, ilk ürün prototipi ve arayüz taslağı hedeflenmiştir. Bu nedenle kullanıcıdan mesaj metni alan, temel risk sinyallerini kontrol etmeyi amaçlayan ve risk skorunu kullanıcıya gösterecek başlangıç ekranı hazırlanmıştır.
+
+Sprint 1 ürün çıktısı kapsamında hedeflenen özellikler:
+
+* Kullanıcıdan mesaj metni alma
+* Link, telefon numarası ve IBAN formatı kontrolü
+* Aciliyet ve ödeme talebi içeren ifadeleri analiz etme
+* Temel risk skoru üretme
+* Kullanıcıya şüpheli noktaları listeleme
+* Güvenli aksiyon önerisi sunma
+
+Ürün durumu ekran görüntüsü:
+
+![Screenshot 1](ProjectManagement/Sprint1Documents/screenshot_1.png)
 
 ---
 
-## Kurulum
+## Sprint Review
 
-Projeyi klonlayın:
+Sprint Review sırasında Sprint 1 kapsamında yapılan çalışmalar değerlendirilmiştir. Takım, ürün fikrini netleştirmiş ve ilk sprint için kapsamın temel risk analizi ile sınırlı tutulmasına karar vermiştir.
 
-```bash
-git clone <repository-url>
-cd scam-message-detector
-```
+Alınan kararlar:
 
-Sanal ortam oluşturun:
+* Ürünün isminin Scam Message Detector olmasına karar verilmiştir.
+* İlk sprintte kapsamın temel prototip ve risk analizi akışıyla sınırlı tutulmasına karar verilmiştir.
+* Kullanıcıdan mesaj metni alınması, risk sinyallerinin tespit edilmesi ve risk skoru üretilmesi Sprint 1’in ana hedefi olarak belirlenmiştir.
+* Gelişmiş yapay zekâ açıklamaları, analiz geçmişi ve dashboard özelliklerinin sonraki sprintlerde ele alınmasına karar verilmiştir.
+* Verilerin kalıcı olarak saklanması için JSON veya SQLite kullanımının sonraki sprintte değerlendirilmesine karar verilmiştir.
+* Çıkan ürünün ilk prototip akışında temel analiz mantığı için bir problem görülmemiştir.
+* Ekstra eklenmesi gereken özellikler sonraki sprint için backlog'a aktarılmıştır.
 
-```bash
-python -m venv venv
-```
+Sprint Review katılımcıları:
 
-Sanal ortamı aktif edin:
-
-```bash
-# macOS / Linux
-source venv/bin/activate
-```
-
-```bash
-# Windows
-venv\Scripts\activate
-```
-
-Gerekli paketleri yükleyin:
-
-```bash
-pip install -r requirements.txt
-```
-
-Uygulamayı çalıştırın:
-
-```bash
-streamlit run app/main.py
-```
+* Şevval Köseoğlu
+* Merve Altınsoy
+* Beyza Hız
 
 ---
 
-## Örnek Kullanım Senaryosu
+## Sprint Retrospective
 
-Kullanıcı aşağıdaki gibi bir mesaj girer:
+Sprint Retrospective sırasında takımın Sprint 1 sürecindeki çalışma düzeni değerlendirilmiş ve sonraki sprint için iyileştirme alanları belirlenmiştir.
 
-```text
-Sayın müşterimiz, kargonuz teslimat merkezinde beklemektedir. Teslimatın iptal olmaması için 24 saat içinde ödeme yapınız: http://example-link.com
-```
+Alınan kararlar:
 
-Sistem aşağıdaki bilgileri üretir:
-
-```text
-Risk Skoru: 85/100
-
-Şüpheli Noktalar:
-- Mesajda ödeme talebi bulunuyor.
-- Mesajda kullanıcıyı hızlı hareket etmeye zorlayan aciliyet ifadesi var.
-- Mesajda dış bağlantı bulunuyor.
-- Mesaj kargo firması taklidi yapıyor olabilir.
-
-Öneri:
-Linke tıklamayın. Kargo durumunu yalnızca ilgili firmanın resmi web sitesi veya mobil uygulaması üzerinden kontrol edin.
-```
-
----
-
-## Sprint 1 Definition of Done
-
-Sprint 1’in tamamlanmış sayılması için:
-
-* Repository oluşturulmuş olmalı
-* README dosyası hazırlanmış olmalı
-* Takım üyeleri ve rolleri belgelenmiş olmalı
-* Ürün fikri, hedef kitle ve product backlog eklenmiş olmalı
-* Kullanıcıdan mesaj alabilen basit arayüz çalışmalı
-* Temel risk sinyallerini kontrol eden analiz fonksiyonu yazılmış olmalı
-* Risk skoru üreten ilk yapı çalışmalı
-* En az 5 örnek mesaj ile test yapılmalı
-* Yapılan işler GitHub commit geçmişiyle belgelenmiş olmalı
-
----
-
-## Not
-
-Scam Message Detector, kullanıcıları şüpheli mesajlara karşı bilinçlendirmeyi amaçlayan bir yardımcı araçtır. Sistem tarafından verilen sonuçlar kesin güvenlik, hukuk veya finans tavsiyesi olarak değerlendirilmemelidir. Şüpheli durumlarda kullanıcıların ilgili kurumun resmi kanallarını kullanarak doğrulama yapması önerilir.
+* Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
+* Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer tarafından verildiğine emin olunmalıdır.
+* Daily Scrum ekran görüntülerinin daha düzenli şekilde saklanmasına karar verilmiştir.
+* Sprint board güncellemelerinin daha sık yapılması gerektiği belirlenmiştir.
+* Test mesajları için ayrılan eforun artırılmasına karar verilmiştir.
+* Risk skoru hesaplama sisteminin sonraki sprintte daha detaylı hale getirilmesi planlanmıştır.
