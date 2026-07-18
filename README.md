@@ -240,5 +240,31 @@ Sprint board screenshotları:
 
 ## Ürün Durumu
 
+Sprint 2 kapsamında, Sprint 1’de oluşturulan kural tabanlı prototipin risk analizi, test edilebilirlik, kullanıcı deneyimi ve yapay zekâ desteği bakımından geliştirilmesi hedeflenmiştir.
+
+Risk analizi mantığı arayüz kodundan ayrılarak daha düzenli ve test edilebilir bir yapı oluşturulmuştur. Tekil risk sinyallerinin yanında, bağlantı ile ödeme talebi veya aciliyet ile ödeme talebi gibi birlikte kullanıldığında dolandırıcılık ihtimalini artıran sinyal kombinasyonları da puanlamaya dahil edilmiştir.
+
+Sprint 2 ürün çıktısı kapsamında tamamlanan özellikler:
+
+* Risk sinyallerinin ağırlıklarının yeniden düzenlenmesi
+* Kişisel bilgi, kart bilgisi, şifre ve doğrulama kodu taleplerinin tespit edilmesi
+* Ödül, çekiliş ve hediye vaatlerinin analiz edilmesi
+* Hesap kapatma, bloke ve yasal işlem tehditlerinin tespit edilmesi
+* Birlikte kullanılan risk sinyalleri için ek puan hesaplanması
+* Her şüpheli noktanın risk skoruna katkısının gösterilmesi
+* Güvenli ve şüpheli mesajlar için otomatik testlerin hazırlanması
+* Risk seviyesine göre renkli sonuç bildirimi gösterilmesi
+* Risk skorunun ilerleme çubuğu ile görselleştirilmesi
+* Risk seviyesine göre güvenli aksiyon önerisi sunulması
+* Gemini 3.5 Flash ile yapay zekâ destekli bağlamsal mesaj yorumu üretilmesi
+* Gemini servisine gönderilmeden önce telefon, IBAN ve uzun numaraların maskelenmesi
+* Yapay zekâ servisine erişilemediğinde kural tabanlı analizin çalışmaya devam etmesi
+
+Hazırlanan 10 otomatik test başarıyla tamamlanmıştır. Güvenli banka bilgilendirme mesajı 0/100 düşük risk, sahte kargo ve ödeme mesajı ise 80/100 yüksek risk olarak değerlendirilmiştir.
+
+Ürün durumu ve test ekran görüntüleri:
+
 ![Screenshot 1](ProjectManagement/Sprint2Documents/screenshot_2_2.png)
 ![Screenshot 2](ProjectManagement/Sprint2Documents/screenshot_2_3.png)
+![Screenshot 3](ProjectManagement/Sprint2Documents/screenshot_2_4.png)
+![Screenshot 4](ProjectManagement/Sprint2Documents/screenshot_2.png)

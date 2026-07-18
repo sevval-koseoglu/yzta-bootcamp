@@ -1,5 +1,6 @@
 import streamlit as st
 
+from ai_analyzer import get_ai_interpretation
 from analyzer import analyze_message
 
 st.set_page_config(page_title="Scam Message Detector", page_icon="🛡️", layout="wide")
@@ -11,6 +12,12 @@ message = st.text_area(
     "Analiz edilecek mesajı girin:",
     height=180,
     placeholder="Örnek: Kargonuz beklemede. Teslimat için 24 saat içinde ödeme yapınız..."
+)
+
+use_ai = st.checkbox(
+    "Yapay zekâ destekli bağlamsal yorum oluştur",
+    value=True,
+    help="Mesajdaki telefon, IBAN ve uzun numaralar maskelendikten sonra Gemini ile yorumlanır.",
 )
 
 if st.button("Mesajı Analiz Et"):
@@ -65,3 +72,26 @@ if st.button("Mesajı Analiz Et"):
             "Bu araç farkındalık amacıyla hazırlanmıştır ve kesin güvenlik kararı vermez. "
             "Şüphe durumunda ilgili kurumla resmi kanallardan iletişime geçin."
         )
+
+        if use_ai:
+            st.subheader("Yapay Zekâ Destekli Yorum")
+            try:
+                with st.spinner("Mesajın bağlamı değerlendiriliyor..."):
+                    ai_interpretation = get_ai_interpretation(
+                        message=message,
+                        score=score,
+                        level=level,
+                        findings=findings,
+                    )
+                st.markdown(ai_interpretation)
+                st.caption("AI modeli: Gemini 3.5 Flash")
+            except ValueError:
+                st.info(
+                    "Yapay zekâ yorumu için GEMINI_API_KEY tanımlanmalıdır. "
+                    "Kural tabanlı analiz kullanılmaya devam ediyor."
+                )
+            except Exception:
+                st.warning(
+                    "Yapay zekâ servisine şu anda ulaşılamadı. "
+                    "Kural tabanlı analiz kullanılmaya devam ediyor."
+                )
