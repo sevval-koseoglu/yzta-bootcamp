@@ -230,7 +230,9 @@ Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştı
 
 ## Sprint Board Update
 
-Sprint board üzerinde Sprint 2 için seçilen story'ler ve bu story'lere bağlı task'ler takip edilmektedir. Görevler To Do, In Progress ve Done durumlarına göre düzenlenmiştir.
+Sprint board üzerinde Sprint 2 için seçilen story'ler ve bu story'lere bağlı task'ler takip edilmiştir. Sprint 2 kapsamında planlanan geliştirme, test, arayüz ve yapay zekâ entegrasyonu görevleri tamamlanarak Done durumuna taşınmıştır.
+
+Sprint Review sonucunda analiz geçmişi, dashboard, test kapsamının genişletilmesi ve uygulamanın canlıya alınması çalışmaları Sprint 3 backlog'una eklenmiş ve To Do durumunda bırakılmıştır.
 
 Sprint board screenshotları:
 
