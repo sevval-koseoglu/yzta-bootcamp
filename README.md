@@ -95,8 +95,8 @@ Sprint 1 kapsamında hedeflenen temel özellikler:
 | 6  | Takım olarak sprint sürecini GitHub üzerinde belgelemek istiyoruz, böylece proje gelişimi düzenli şekilde takip edilebilir.       | High    | To Do |
 
 ---
-
-# Sprint 1
+<details>
+<summary><h1>Sprint 1</h1></summary>
 
 ## Backlog Düzeni ve Story Seçimleri
 
@@ -192,10 +192,12 @@ Alınan kararlar:
 * Sprint board güncellemelerinin daha sık yapılması gerektiği belirlenmiştir.
 * Test mesajları için ayrılan eforun artırılmasına karar verilmiştir.
 * Risk skoru hesaplama sisteminin sonraki sprintte daha detaylı hale getirilmesi planlanmıştır.
+</details>
 
 ---
 
-# Sprint 2
+<details>
+<summary><h1>Sprint 2</h1></summary>
 
 ## Backlog Düzeni ve Story Seçimleri
 
@@ -307,3 +309,4 @@ Alınan kararlar:
 * Sprint board'un geliştirme süreci boyunca daha sık güncellenmesi gerektiği değerlendirilmiştir.
 * API anahtarı gibi hassas bilgilerin kod içerisinde veya GitHub repository'sinde tutulmamasına dikkat edilmesine karar verilmiştir.
 * Sprint 3 kapsamında analiz geçmişi, dashboard, daha geniş test verisi ve uygulamanın canlıya alınması çalışmalarına öncelik verilmesi planlanmıştır.
+</details>
