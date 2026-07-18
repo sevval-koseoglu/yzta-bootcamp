@@ -57,29 +57,72 @@ Günümüzde kullanıcılar; sahte kargo mesajları, banka taklidi yapan SMS’l
 
 ## Ürün Özellikleri
 
-Sprint 1 kapsamında hedeflenen temel özellikler:
+Ürünün mevcut sürümünde yer alan temel özellikler:
 
-* Kullanıcıdan mesaj metni alma
-* Mesaj içerisindeki şüpheli linkleri tespit etme
-* Telefon numarası ve IBAN formatlarını tespit etme
+* Kullanıcıdan Türkçe SMS, e-posta veya mesaj metni alma
+* Link, telefon numarası ve IBAN formatlarını tespit etme
 * Aciliyet, ödeme talebi ve kurum taklidi gibi risk sinyallerini analiz etme
-* Mesaja göre temel dolandırıcılık risk skoru üretme
-* Şüpheli noktaları kullanıcıya madde madde açıklama
-* Kullanıcıya güvenli aksiyon önerileri sunma
-* Örnek mesajlar üzerinden test edilebilir analiz sistemi oluşturma
+* Kişisel bilgi, kart bilgisi, şifre ve doğrulama kodu taleplerini tespit etme
+* Ödül, çekiliş, hesap kapatma, bloke ve yasal işlem ifadelerini analiz etme
+* Tekil risk sinyallerini ve birlikte kullanılan sinyal kombinasyonlarını puanlama
+* Mesaj için 0-100 arasında açıklanabilir risk skoru üretme
+* Her şüpheli noktanın risk skoruna katkısını gösterme
+* Risk seviyesine göre renkli sonuç bildirimi ve güvenli aksiyon önerisi sunma
+* Gemini 3.5 Flash ile yapay zekâ destekli bağlamsal mesaj yorumu oluşturma
+* Gemini servisine gönderilmeden önce telefon, IBAN ve uzun numaraları maskeleme
+* Yapay zekâ servisine erişilemediğinde kural tabanlı analizle çalışmaya devam etme
+* Güvenli ve şüpheli mesaj senaryolarını otomatik testlerle doğrulama
 
 ---
 
-## Kullanılacak Teknolojiler
+## Kullanılan Teknolojiler
 
-| Teknoloji                | Kullanım Amacı                                |
-| ------------------------ | --------------------------------------------- |
-| Python                   | Ana geliştirme dili                           |
-| Streamlit                | Web arayüzü                                   |
-| Regex                    | Link, telefon, IBAN ve anahtar kelime tespiti |
-| JSON                     | Örnek mesajların saklanması                   |
-| GitHub                   | Versiyon kontrolü ve proje dokümantasyonu     |
-| GitHub Projects / Issues | Sprint ve backlog takibi                      |
+| Teknoloji | Kullanım Amacı |
+| --------- | -------------- |
+| Python | Ana geliştirme dili |
+| Streamlit | Web arayüzü |
+| Regex | Link, telefon, IBAN ve anahtar kelime tespiti |
+| Gemini 3.5 Flash | Yapay zekâ destekli bağlamsal mesaj yorumu |
+| Google Gen AI SDK | Gemini API entegrasyonu |
+| unittest | Otomatik analiz testleri |
+| GitHub | Versiyon kontrolü ve proje dokümantasyonu |
+| GitHub Projects / Issues | Sprint ve backlog takibi |
+
+---
+
+## Kurulum ve Çalıştırma
+
+Repository bilgisayara indirildikten sonra uygulama klasörüne geçilir:
+
+```bash
+cd app
+```
+
+Gerekli Python kütüphaneleri yüklenir:
+
+```bash
+pip install -r requirements.txt
+```
+
+Yapay zekâ destekli bağlamsal analiz özelliğini kullanmak için Gemini API anahtarı ortam değişkeni olarak tanımlanır:
+
+```bash
+export GEMINI_API_KEY="YOUR_API_KEY"
+```
+
+API anahtarı doğrudan kod içerisinde tutulmamalı ve GitHub repository'sine yüklenmemelidir. API anahtarı tanımlanmadığında veya Gemini servisine erişilemediğinde uygulama kural tabanlı analiz sistemiyle çalışmaya devam eder.
+
+Streamlit uygulaması aşağıdaki komutla başlatılır:
+
+```bash
+streamlit run main.py
+```
+
+Otomatik testler aşağıdaki komutla çalıştırılır:
+
+```bash
+python -m unittest -v test_analyzer.py
+```
 
 ---
 
@@ -203,8 +246,6 @@ Alınan kararlar:
 
 Backlog'umuz Sprint 2 kapsamında, Sprint 1 sonunda elde edilen çalışan prototipin geliştirilmesine yönelik öncelikli story'lere göre düzenlenmiştir. İkinci sprintte amaç; mevcut risk analizi sistemini daha detaylı hale getirmek, farklı mesaj örnekleriyle test etmek ve mesajın bağlamını değerlendirebilen yapay zekâ destekli analiz özelliğini ürüne eklemektir.
 
-Ekip üyelerinin Sprint 2 sürecinde yeterli katılım sağlayamaması üzerine durum bootcamp yetkilisine bildirilmiştir. Alınan yönlendirme doğrultusunda sprint kapsamı bireysel olarak tamamlanabilecek şekilde düzenlenmiş ve proje Şevval Köseoğlu tarafından sürdürülmüştür.
-
 Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde story seçimleri yapılmıştır. Story başına çıkan tahmin puanı, toplam sprint puanının yarısından az tutulmuştur. Sprint 2 kapsamında toplam 18 puanlık iş tamamlanması hedeflenmiştir.
 
 Sprint 2 için seçilen story'ler aşağıdaki gibidir:
@@ -222,7 +263,7 @@ Story'ler yapılacak işlere, yani task'lere bölünmüştür. Sprint 2 kapsamı
 
 ## Daily Scrum
 
-Sprint 2 başlangıcında backlog'un değerlendirilmesi, görev dağılımının yapılması ve geliştirme sürecinin planlanması amacıyla ekip üyeleriyle iletişim kurulmaya çalışılmıştır.
+Sprint 2 başlangıcında backlog'un değerlendirilmesi, görevlerin planlanması ve geliştirme sürecinin belirlenmesi amacıyla ekip içi iletişim mesajlaşma kanalı üzerinden yürütülmüştür.
 
 Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştır:
 
@@ -299,7 +340,7 @@ Sprint Review katılımcısı:
 
 ## Sprint Retrospective
 
-Sprint Retrospective sırasında Sprint 2 sürecindeki bireysel çalışma düzeni, teknik geliştirmeler ve proje yönetimi değerlendirilmiştir.
+Sprint Retrospective sırasında Sprint 2 sürecindeki çalışma düzeni, teknik geliştirmeler ve proje yönetimi değerlendirilmiştir.
 
 Alınan kararlar:
 
