@@ -207,7 +207,7 @@ Sprint 1 ürün çıktısı kapsamında hedeflenen özellikler:
 * Kullanıcıya şüpheli noktaları listeleme
 * Güvenli aksiyon önerisi sunma
 
-Ürün durumu ekran görüntüsü:
+Ürün durumu ekran görüntüleri:
 
 ![Yüksek Risk Analizi](ProjectManagement/Sprint1Documents/screenshot_1.png)
 ![Düşük Risk Analizi](ProjectManagement/Sprint1Documents/screenshot_1_2.png)
