@@ -228,7 +228,7 @@ Alınan kararlar:
 * Çıkan ürünün ilk prototip akışında temel analiz mantığı için bir problem görülmemiştir.
 * Ekstra eklenmesi gereken özellikler sonraki sprint için backlog'a aktarılmıştır.
 
-Sprint Review katılımcıları:
+Sprint Review katılımcısı:
 
 * Şevval Köseoğlu
 
