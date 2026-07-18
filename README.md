@@ -156,7 +156,7 @@ Sprint 1 ürün çıktısı kapsamında hedeflenen özellikler:
 Ürün durumu ekran görüntüsü:
 
 ![Screenshot 1](ProjectManagement/Sprint1Documents/screenshot_1.png)
-![Screenshot 2](ProjectManagement/Sprint1Documents/screenshot_1.2.png.png)
+![Screenshot 2](ProjectManagement/Sprint1Documents/screenshot_1_2.png)
 
 ---
 
@@ -240,5 +240,5 @@ Sprint board screenshotları:
 
 ## Ürün Durumu
 
-![Screenshot 1](ProjectManagement/Sprint2Documents/screenshot_2.2.png.png)
-![Screenshot 2](ProjectManagement/Sprint2Documents/screenshot_2.3.png.png.png)
+![Screenshot 1](ProjectManagement/Sprint2Documents/screenshot_2_2.png)
+![Screenshot 2](ProjectManagement/Sprint2Documents/screenshot_2_3.png)
