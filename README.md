@@ -127,7 +127,7 @@ Bu süreçte repository paylaşımı, Scrum Master ve Product Owner rollerinin b
 
 Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştır:
 
-![Daily Scrum 1](ProjectManagement/Sprint1Documents/daily_1.png)
+![Daily Scrum 1](ProjectManagement/Sprint1Documents/scrum_1.png)
 
 ---
 
