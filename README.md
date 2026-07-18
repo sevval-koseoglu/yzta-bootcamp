@@ -98,7 +98,7 @@ Sprint 1 kapsamında hedeflenen temel özellikler:
 
 # Sprint 1
 
-## Backlog düzeni ve Story seçimleri
+## Backlog Düzeni ve Story Seçimleri
 
 Backlog'umuz Sprint 1 kapsamında öncelikli olarak yapılması gereken story'lere göre düzenlenmiştir. İlk sprintte amaç, ürünün temel yapısını kurmak ve kullanıcıdan alınan mesaj metni üzerinden basit bir risk analizi yapabilen ilk prototipi geliştirmektir.
 
@@ -130,7 +130,7 @@ Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştı
 
 ---
 
-## Sprint board update
+## Sprint Board Update
 
 Sprint board üzerinde Sprint 1 için seçilen story'ler ve task'ler takip edilmiştir. Görevler To Do, In Progress ve Done durumlarına göre düzenlenmiştir.
 
@@ -197,7 +197,7 @@ Alınan kararlar:
 
 # Sprint 2
 
-## Backlog düzeni ve Story seçimleri
+## Backlog Düzeni ve Story Seçimleri
 
 Backlog'umuz Sprint 2 kapsamında, Sprint 1 sonunda elde edilen çalışan prototipin geliştirilmesine yönelik öncelikli story'lere göre düzenlenmiştir. İkinci sprintte amaç; mevcut risk analizi sistemini daha detaylı hale getirmek, farklı mesaj örnekleriyle test etmek ve mesajın bağlamını değerlendirebilen yapay zekâ destekli analiz özelliğini ürüne eklemektir.
 
@@ -228,7 +228,7 @@ Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştı
 
 ---
 
-## Sprint board update
+## Sprint Board Update
 
 Sprint board üzerinde Sprint 2 için seçilen story'ler ve bu story'lere bağlı task'ler takip edilmektedir. Görevler To Do, In Progress ve Done durumlarına göre düzenlenmiştir.
 
