@@ -121,7 +121,7 @@ Story'ler yapılacak işlere, yani task'lere bölünmüştür. Sprint 1 kapsamı
 
 ## Daily Scrum
 
-Daily Scrum toplantılarının ekip üyelerinin uygunluk durumuna göre çevrim içi olarak yapılmasına karar verilmiştir. Sprint 1 sürecinde ekip içi iletişim ağırlıklı olarak mesajlaşma kanalı üzerinden yürütülmüştür.
+Sprint 1 sürecinde ekip içi iletişim ağırlıklı olarak mesajlaşma kanalı üzerinden yürütülmüştür.
 
 Bu süreçte repository paylaşımı, Scrum Master ve Product Owner rollerinin belirlenmesi, ürün fikrinin netleştirilmesi, toplantı planlaması ve ekip bilgileri formu için gerekli bilgilerin toplanması gibi konular konuşulmuştur.
 
@@ -194,3 +194,46 @@ Alınan kararlar:
 * Sprint board güncellemelerinin daha sık yapılması gerektiği belirlenmiştir.
 * Test mesajları için ayrılan eforun artırılmasına karar verilmiştir.
 * Risk skoru hesaplama sisteminin sonraki sprintte daha detaylı hale getirilmesi planlanmıştır.
+
+---
+
+# Sprint 2
+
+## Backlog düzeni ve Story seçimleri
+
+Backlog'umuz Sprint 2 kapsamında, Sprint 1 sonunda elde edilen çalışan prototipin geliştirilmesine yönelik öncelikli story'lere göre düzenlenmiştir. İkinci sprintte amaç; mevcut risk analizi sistemini daha detaylı hale getirmek, farklı mesaj örnekleriyle test etmek ve mesajın bağlamını değerlendirebilen yapay zekâ destekli analiz özelliğini ürüne eklemektir.
+
+Ekip üyelerinin Sprint 2 sürecinde yeterli katılım sağlayamaması üzerine durum bootcamp yetkilisine bildirilmiştir. Alınan yönlendirme doğrultusunda sprint kapsamı bireysel olarak tamamlanabilecek şekilde düzenlenmiş ve proje Şevval Köseoğlu tarafından sürdürülmüştür.
+
+Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde story seçimleri yapılmıştır. Story başına çıkan tahmin puanı, toplam sprint puanının yarısından az tutulmuştur. Sprint 2 kapsamında toplam 18 puanlık iş tamamlanması hedeflenmiştir.
+
+Sprint 2 için seçilen story'ler aşağıdaki gibidir:
+
+| No | Story | Tahmin Puanı | Öncelik |
+| -- | ----- | -----------: | ------- |
+| 6 | Kullanıcı olarak daha detaylı bir risk analizi görmek istiyorum, böylece mesajdaki farklı dolandırıcılık sinyallerini anlayabilirim. | 5 | High |
+| 7 | Kullanıcı olarak mesajın bağlamını değerlendiren yapay zekâ destekli bir yorum görmek istiyorum, böylece yalnızca anahtar kelimelere dayanmayan bir sonuç alabilirim. | 8 | High |
+| 8 | Kullanıcı olarak sistemin farklı güvenli ve şüpheli mesajlarla test edilmesini istiyorum, böylece analiz sonuçlarının güvenilirliğini değerlendirebilirim. | 3 | High |
+| 9 | Kullanıcı olarak analiz sonucunu daha anlaşılır bir arayüzde görmek istiyorum, böylece risk seviyesini ve şüpheli noktaları kolayca inceleyebilirim. | 2 | Medium |
+
+Story'ler yapılacak işlere, yani task'lere bölünmüştür. Sprint 2 kapsamında belirlenen temel task'ler; yeni dolandırıcılık sinyallerinin eklenmesi, risk skoru ağırlıklarının yeniden düzenlenmesi, kişisel bilgi talebi ile ödül ve hesap kapatma tehdidi içeren ifadelerin tespit edilmesi, yapay zekâ destekli bağlamsal mesaj analizinin eklenmesi, yapay zekâ servisine erişilemediğinde kural tabanlı sistemin çalışmaya devam etmesinin sağlanması, güvenli ve şüpheli test mesajlarının hazırlanması ve Streamlit sonuç ekranının geliştirilmesidir.
+
+---
+
+## Daily Scrum
+
+Sprint 2 başlangıcında backlog'un değerlendirilmesi, görev dağılımının yapılması ve geliştirme sürecinin planlanması amacıyla ekip üyeleriyle iletişim kurulmaya çalışılmıştır.
+
+Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştır:
+
+![Daily Scrum 2](ProjectManagement/Sprint1Documents/scrum_2.png)
+
+---
+
+## Sprint board update
+
+Sprint board üzerinde Sprint 2 için seçilen story'ler ve bu story'lere bağlı task'ler takip edilmektedir. Görevler To Do, In Progress ve Done durumlarına göre düzenlenmiştir.
+
+Sprint board screenshotları:
+
+![Backlog 2](ProjectManagement/Sprint2Documents/backlog_2.png)
