@@ -12,7 +12,6 @@ Grup 18
 | --------------- | ------------- |
 | Şevval Köseoğlu | Scrum Master  |
 | Merve Altınsoy  | Product Owner |
-| Beyza Hız       | Developer     |
 
 ---
 
@@ -226,7 +225,7 @@ Sprint 2 başlangıcında backlog'un değerlendirilmesi, görev dağılımının
 
 Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştır:
 
-![Daily Scrum 2](ProjectManagement/Sprint1Documents/scrum_2.png)
+![Daily Scrum 2](ProjectManagement/Sprint2Documents/scrum_2.png)
 
 ---
 
