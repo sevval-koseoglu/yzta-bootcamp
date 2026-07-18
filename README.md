@@ -128,16 +128,27 @@ python -m unittest -v test_analyzer.py
 
 ## Product Backlog
 
-| No | User Story                                                                                                                        | Öncelik | Durum |
-| -- | --------------------------------------------------------------------------------------------------------------------------------- | ------- | ----- |
-| 1  | Kullanıcı olarak mesaj metni girmek istiyorum, böylece mesajın riskli olup olmadığını analiz edebilirim.                          | High    | To Do |
-| 2  | Kullanıcı olarak mesajdaki şüpheli linkleri görmek istiyorum, böylece linke tıklamadan önce riskleri anlayabilirim.               | High    | To Do |
-| 3  | Kullanıcı olarak mesaj için bir risk skoru görmek istiyorum, böylece mesajın ne kadar tehlikeli olabileceğini anlayabilirim.      | High    | To Do |
-| 4  | Kullanıcı olarak mesajın neden riskli olduğunu madde madde görmek istiyorum, böylece sonucu daha kolay anlayabilirim.             | High    | To Do |
-| 5  | Kullanıcı olarak güvenli aksiyon önerileri almak istiyorum, böylece şüpheli mesaj karşısında ne yapmam gerektiğini öğrenebilirim. | Medium  | To Do |
-| 6  | Takım olarak sprint sürecini GitHub üzerinde belgelemek istiyoruz, böylece proje gelişimi düzenli şekilde takip edilebilir.       | High    | To Do |
+| No | User Story | Öncelik | Durum |
+| -- | ---------- | ------- | ----- |
+| 1 | Kullanıcı olarak mesaj metni girmek istiyorum, böylece mesajın riskli olup olmadığını analiz edebilirim. | High | Done |
+| 2 | Kullanıcı olarak mesajdaki şüpheli linkleri görmek istiyorum, böylece linke tıklamadan önce riskleri anlayabilirim. | High | Done |
+| 3 | Kullanıcı olarak mesaj için bir risk skoru görmek istiyorum, böylece mesajın ne kadar tehlikeli olabileceğini anlayabilirim. | High | Done |
+| 4 | Kullanıcı olarak mesajın neden riskli olduğunu madde madde görmek istiyorum, böylece sonucu daha kolay anlayabilirim. | High | Done |
+| 5 | Kullanıcı olarak güvenli aksiyon önerileri almak istiyorum, böylece şüpheli mesaj karşısında ne yapmam gerektiğini öğrenebilirim. | Medium | Done |
+| 6 | Takım olarak sprint sürecini GitHub üzerinde belgelemek istiyoruz, böylece proje gelişimi düzenli şekilde takip edilebilir. | High | Done |
+| 7 | Kullanıcı olarak daha detaylı bir risk analizi görmek istiyorum, böylece mesajdaki farklı dolandırıcılık sinyallerini anlayabilirim. | High | Done |
+| 8 | Kullanıcı olarak mesajın bağlamını değerlendiren yapay zekâ destekli bir yorum görmek istiyorum, böylece yalnızca anahtar kelimelere dayanmayan bir sonuç alabilirim. | High | Done |
+| 9 | Kullanıcı olarak sistemin farklı güvenli ve şüpheli mesajlarla test edilmesini istiyorum, böylece analiz sonuçlarının güvenilirliğini değerlendirebilirim. | High | Done |
+| 10 | Kullanıcı olarak analiz sonucunu daha anlaşılır bir arayüzde görmek istiyorum, böylece risk seviyesini ve şüpheli noktaları kolayca inceleyebilirim. | Medium | Done |
+| 11 | Kullanıcı olarak geçmiş analiz sonuçlarını görüntülemek istiyorum, böylece daha önce kontrol ettiğim mesajları yeniden inceleyebilirim. | High | To Do |
+| 12 | Kullanıcı olarak analiz sonuçlarını bir dashboard üzerinde görmek istiyorum, böylece risk dağılımlarını kolayca değerlendirebilirim. | Medium | To Do |
+| 13 | Kullanıcı olarak daha fazla güvenli ve şüpheli mesaj senaryosunun test edilmesini istiyorum, böylece sistemin farklı mesaj türlerindeki davranışını görebilirim. | High | To Do |
+| 14 | Kullanıcı olarak uygulamaya internet üzerinden erişmek istiyorum, böylece sistemi kurulum yapmadan kullanabilirim. | High | To Do |
+
+Product Backlog numaraları kullanıcı story'lerini temsil etmektedir. GitHub Issues üzerindeki numaralar ise bu story'leri gerçekleştirmek için oluşturulan geliştirme ve dokümantasyon task'lerine aittir; bu nedenle iki numaralandırma birbirinden bağımsızdır.
 
 ---
+
 <details>
 <summary><h1>Sprint 1</h1></summary>
 
@@ -145,17 +156,17 @@ python -m unittest -v test_analyzer.py
 
 Backlog'umuz Sprint 1 kapsamında öncelikli olarak yapılması gereken story'lere göre düzenlenmiştir. İlk sprintte amaç, ürünün temel yapısını kurmak ve kullanıcıdan alınan mesaj metni üzerinden basit bir risk analizi yapabilen ilk prototipi geliştirmektir.
 
-Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde story seçimleri yapılmıştır. Story başına çıkan tahmin puanı, toplam sprint puanının yarısından az tutulmuştur.
+Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde story seçimleri yapılmıştır. Story başına çıkan tahmin puanı, toplam sprint puanının yarısından az tutulmuştur. Sprint 1 kapsamında toplam 20 puanlık çalışma planlanmıştır.
 
 Sprint 1 için seçilen story'ler aşağıdaki gibidir:
 
-| No | Story                                                                                                                             | Tahmin Puanı | Öncelik |
-| -- | --------------------------------------------------------------------------------------------------------------------------------- | -----------: | ------- |
-| 1  | Kullanıcı olarak mesaj metni girmek istiyorum, böylece mesajın riskli olup olmadığını analiz edebilirim.                          |            3 | High    |
-| 2  | Kullanıcı olarak mesajdaki şüpheli linkleri görmek istiyorum, böylece linke tıklamadan önce riskleri anlayabilirim.               |            5 | High    |
-| 3  | Kullanıcı olarak mesaj için bir risk skoru görmek istiyorum, böylece mesajın ne kadar tehlikeli olabileceğini anlayabilirim.      |            5 | High    |
-| 4  | Kullanıcı olarak mesajın neden riskli olduğunu madde madde görmek istiyorum, böylece sonucu daha kolay anlayabilirim.             |            5 | High    |
-| 5  | Kullanıcı olarak güvenli aksiyon önerileri almak istiyorum, böylece şüpheli mesaj karşısında ne yapmam gerektiğini öğrenebilirim. |            2 | Medium  |
+| No | Story | Tahmin Puanı | Öncelik |
+| -- | ----- | -----------: | ------- |
+| 1 | Kullanıcı olarak mesaj metni girmek istiyorum, böylece mesajın riskli olup olmadığını analiz edebilirim. | 3 | High |
+| 2 | Kullanıcı olarak mesajdaki şüpheli linkleri görmek istiyorum, böylece linke tıklamadan önce riskleri anlayabilirim. | 5 | High |
+| 3 | Kullanıcı olarak mesaj için bir risk skoru görmek istiyorum, böylece mesajın ne kadar tehlikeli olabileceğini anlayabilirim. | 5 | High |
+| 4 | Kullanıcı olarak mesajın neden riskli olduğunu madde madde görmek istiyorum, böylece sonucu daha kolay anlayabilirim. | 5 | High |
+| 5 | Kullanıcı olarak güvenli aksiyon önerileri almak istiyorum, böylece şüpheli mesaj karşısında ne yapmam gerektiğini öğrenebilirim. | 2 | Medium |
 
 Story'ler yapılacak işlere, yani task'lere bölünmüştür. Sprint 1 kapsamında belirlenen temel task'ler; repository yapısının oluşturulması, README dosyasının hazırlanması, Streamlit arayüzünün kurulması, mesaj giriş alanının oluşturulması, link/telefon/IBAN tespiti için regex yapısının hazırlanması ve temel risk skoru hesaplama fonksiyonunun geliştirilmesidir.
 
@@ -167,7 +178,7 @@ Sprint 1 sürecinde ekip içi iletişim ağırlıklı olarak mesajlaşma kanalı
 
 Bu süreçte repository paylaşımı, Scrum Master ve Product Owner rollerinin belirlenmesi, ürün fikrinin netleştirilmesi, toplantı planlaması ve ekip bilgileri formu için gerekli bilgilerin toplanması gibi konular konuşulmuştur.
 
-Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştır:
+Daily Scrum / sprint iletişimi ekran görüntüsü aşağıda paylaşılmıştır:
 
 ![Daily Scrum](ProjectManagement/Sprint1Documents/scrum_1.png)
 
@@ -246,7 +257,7 @@ Alınan kararlar:
 
 Backlog'umuz Sprint 2 kapsamında, Sprint 1 sonunda elde edilen çalışan prototipin geliştirilmesine yönelik öncelikli story'lere göre düzenlenmiştir. İkinci sprintte amaç; mevcut risk analizi sistemini daha detaylı hale getirmek, farklı mesaj örnekleriyle test etmek ve mesajın bağlamını değerlendirebilen yapay zekâ destekli analiz özelliğini ürüne eklemektir.
 
-Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde story seçimleri yapılmıştır. Story başına çıkan tahmin puanı, toplam sprint puanının yarısından az tutulmuştur. Sprint 2 kapsamında toplam 18 puanlık iş tamamlanması hedeflenmiştir.
+Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde story seçimleri yapılmıştır. Story başına çıkan tahmin puanı, toplam sprint puanının yarısından az tutulmuştur. Sprint 2 kapsamında toplam 18 puanlık çalışmanın tamamlanması hedeflenmiştir.
 
 Sprint 2 için seçilen story'ler aşağıdaki gibidir:
 
@@ -263,9 +274,9 @@ Story'ler yapılacak işlere, yani task'lere bölünmüştür. Sprint 2 kapsamı
 
 ## Daily Scrum
 
-Sprint 2 başlangıcında backlog'un değerlendirilmesi, görevlerin planlanması ve geliştirme sürecinin belirlenmesi amacıyla ekip içi iletişim mesajlaşma kanalı üzerinden yürütülmüştür.
+Sprint 2 başlangıcında backlog değerlendirilmiş, yapılacak görevler planlanmış ve geliştirme sürecine ilişkin iletişim mesajlaşma kanalı üzerinden yürütülmüştür.
 
-Daily Scrum / ekip iletişimi ekran görüntüleri aşağıda paylaşılmıştır:
+Daily Scrum / sprint iletişimi ekran görüntüsü aşağıda paylaşılmıştır:
 
 ![Daily Scrum](ProjectManagement/Sprint2Documents/scrum_2.png)
 
