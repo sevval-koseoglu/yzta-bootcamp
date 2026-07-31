@@ -405,7 +405,7 @@ Daily Scrum / sprint iletişimi ekran görüntüsü aşağıda paylaşılacaktı
 
 Sprint board üzerinde Sprint 3 için seçilen story'ler ve bu story'lere bağlı task'ler takip edilmiştir. Analiz geçmişi, dashboard, test kapsamının genişletilmesi ve uygulamanın canlıya alınması için planlanan toplam 18 puanlık çalışma tamamlanarak Done durumuna taşınmıştır.
 
-Sprint board ekran görüntüsü aşağıda paylaşılacaktır:
+Sprint board screenshotları:
 
 ![Sprint Board](ProjectManagement/Sprint3Documents/backlog_3.png)
 
@@ -433,7 +433,7 @@ Canlı uygulamaya aşağıdaki bağlantıdan erişilebilir:
 
 [Scam Message Detector](https://scam-message-detector.streamlit.app)
 
-Ürün durumu ve test ekran görüntüleri aşağıda paylaşılacaktır:
+Ürün durumu ve test ekran görüntüleri:
 
 ![Mesaj Analizi](ProjectManagement/Sprint3Documents/screenshot_3.png)
 ![Analiz Geçmişi](ProjectManagement/Sprint3Documents/screenshot_3_2.png)
