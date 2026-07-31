@@ -10,8 +10,7 @@ Grup 18
 
 | Name            | Title         |
 | --------------- | ------------- |
-| Şevval Köseoğlu | Scrum Master  |
-| Merve Altınsoy  | Product Owner |
+| Şevval Köseoğlu | Scrum Master / Product Owner / Developer |
 
 ---
 
