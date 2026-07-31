@@ -59,36 +59,37 @@ Günümüzde kullanıcılar; sahte kargo mesajları, banka taklidi yapan SMS’l
 Ürünün mevcut sürümünde yer alan temel özellikler:
 
 * Kullanıcıdan Türkçe SMS, e-posta veya mesaj metni alma
-Link, telefon numarası ve IBAN formatlarını tespit etme
-Aciliyet, ödeme talebi ve kurum taklidi gibi risk sinyallerini analiz etme
-Kişisel bilgi, kart bilgisi, şifre ve doğrulama kodu taleplerini tespit etme
-Ödül, çekiliş, hesap kapatma, bloke ve yasal işlem ifadelerini analiz etme
-Tekil risk sinyallerini ve birlikte kullanılan sinyal kombinasyonlarını puanlama
-Mesaj için 0-100 arasında açıklanabilir risk skoru üretme
-Her şüpheli noktanın risk skoruna katkısını gösterme
-Risk seviyesine göre renkli sonuç bildirimi ve güvenli aksiyon önerisi sunma
-Gemini 3.6 Flash ile yapay zekâ destekli bağlamsal mesaj yorumu oluşturma
-Gemini servisine gönderilmeden önce telefon, IBAN ve uzun numaraları maskeleme
-Yapay zekâ servisine erişilemediğinde kural tabanlı analizle çalışmaya devam etme
-Güvenli ve şüpheli mesaj senaryolarını otomatik testlerle doğrulama
-Maskelenmiş mesaj özetleriyle analiz geçmişini SQLite veritabanında saklama
-Toplam analiz, ortalama risk skoru ve risk dağılımını dashboard üzerinde gösterme
-Analiz geçmişini temizleme
+* Link, telefon numarası ve IBAN formatlarını tespit etme
+* Aciliyet, ödeme talebi ve kurum taklidi gibi risk sinyallerini analiz etme
+* Kişisel bilgi, kart bilgisi, şifre ve doğrulama kodu taleplerini tespit etme
+* Ödül, çekiliş, hesap kapatma, bloke ve yasal işlem ifadelerini analiz etme
+* Tekil risk sinyallerini ve birlikte kullanılan sinyal kombinasyonlarını puanlama
+* Mesaj için 0-100 arasında açıklanabilir risk skoru üretme
+* Her şüpheli noktanın risk skoruna katkısını gösterme
+* Risk seviyesine göre renkli sonuç bildirimi ve güvenli aksiyon önerisi sunma
+* Gemini 3.6 Flash ile yapay zekâ destekli bağlamsal mesaj yorumu oluşturma
+* Gemini servisine gönderilmeden önce telefon, IBAN ve uzun numaraları maskeleme
+* Yapay zekâ servisine erişilemediğinde kural tabanlı analizle çalışmaya devam etme
+* Güvenli ve şüpheli mesaj senaryolarını otomatik testlerle doğrulama
+* Maskelenmiş mesaj özetleriyle analiz geçmişini SQLite veritabanında saklama
+* Toplam analiz, ortalama risk skoru ve risk dağılımını dashboard üzerinde gösterme
+* Analiz geçmişini temizleme
 
 ---
 
 ## Kullanılan Teknolojiler
 
-| Teknoloji | Kullanım Amacı |
-| --------- | -------------- |
-| Python | Ana geliştirme dili |
-| Streamlit | Web arayüzü |
-| Regex | Link, telefon, IBAN ve anahtar kelime tespiti |
-| Gemini 3.5 Flash | Yapay zekâ destekli bağlamsal mesaj yorumu |
-| Google Gen AI SDK | Gemini API entegrasyonu |
-| unittest | Otomatik analiz testleri |
-| GitHub | Versiyon kontrolü ve proje dokümantasyonu |
-| GitHub Projects / Issues | Sprint ve backlog takibi |
+| Teknoloji                | Kullanım Amacı                                |
+| ------------------------ | --------------------------------------------- |
+| Python                   | Ana geliştirme dili                           |
+| Streamlit                | Web arayüzü                                   |
+| Regex                    | Link, telefon, IBAN ve anahtar kelime tespiti |
+| Gemini 3.6 Flash         | Yapay zekâ destekli bağlamsal mesaj yorumu    |
+| Google Gen AI SDK        | Gemini API entegrasyonu                       |
+| SQLite                   | Analiz geçmişinin kalıcı olarak saklanması    |
+| unittest                 | Otomatik analiz testleri                      |
+| GitHub                   | Versiyon kontrolü ve proje dokümantasyonu     |
+| GitHub Projects / Issues | Sprint ve backlog takibi                      |
 
 ---
 
@@ -123,29 +124,30 @@ streamlit run main.py
 Otomatik testler aşağıdaki komutla çalıştırılır:
 
 ```bash
-python -m unittest -v test_analyzer.py
+python -m unittest discover -v
 ```
 
 ---
 
 ## Product Backlog
 
-| No | User Story | Öncelik | Durum |
-| -- | ---------- | ------- | ----- |
-| 1 | Kullanıcı olarak mesaj metni girmek istiyorum, böylece mesajın riskli olup olmadığını analiz edebilirim. | High | Done |
-| 2 | Kullanıcı olarak mesajdaki şüpheli linkleri görmek istiyorum, böylece linke tıklamadan önce riskleri anlayabilirim. | High | Done |
-| 3 | Kullanıcı olarak mesaj için bir risk skoru görmek istiyorum, böylece mesajın ne kadar tehlikeli olabileceğini anlayabilirim. | High | Done |
-| 4 | Kullanıcı olarak mesajın neden riskli olduğunu madde madde görmek istiyorum, böylece sonucu daha kolay anlayabilirim. | High | Done |
-| 5 | Kullanıcı olarak güvenli aksiyon önerileri almak istiyorum, böylece şüpheli mesaj karşısında ne yapmam gerektiğini öğrenebilirim. | Medium | Done |
-| 6 | Takım olarak sprint sürecini GitHub üzerinde belgelemek istiyoruz, böylece proje gelişimi düzenli şekilde takip edilebilir. | High | Done |
-| 7 | Kullanıcı olarak daha detaylı bir risk analizi görmek istiyorum, böylece mesajdaki farklı dolandırıcılık sinyallerini anlayabilirim. | High | Done |
-| 8 | Kullanıcı olarak mesajın bağlamını değerlendiren yapay zekâ destekli bir yorum görmek istiyorum, böylece yalnızca anahtar kelimelere dayanmayan bir sonuç alabilirim. | High | Done |
-| 9 | Kullanıcı olarak sistemin farklı güvenli ve şüpheli mesajlarla test edilmesini istiyorum, böylece analiz sonuçlarının güvenilirliğini değerlendirebilirim. | High | Done |
-| 10 | Kullanıcı olarak analiz sonucunu daha anlaşılır bir arayüzde görmek istiyorum, böylece risk seviyesini ve şüpheli noktaları kolayca inceleyebilirim. | Medium | Done |
-| 11 | Kullanıcı olarak geçmiş analiz sonuçlarını görüntülemek istiyorum, böylece daha önce kontrol ettiğim mesajları yeniden inceleyebilirim. | High | To Do |
-| 12 | Kullanıcı olarak analiz sonuçlarını bir dashboard üzerinde görmek istiyorum, böylece risk dağılımlarını kolayca değerlendirebilirim. | Medium | To Do |
-| 13 | Kullanıcı olarak daha fazla güvenli ve şüpheli mesaj senaryosunun test edilmesini istiyorum, böylece sistemin farklı mesaj türlerindeki davranışını görebilirim. | High | To Do |
-| 14 | Kullanıcı olarak uygulamaya internet üzerinden erişmek istiyorum, böylece sistemi kurulum yapmadan kullanabilirim. | High | To Do |
+| No | User Story                                                                                                                                                            | Öncelik | Durum |
+| -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ----- |
+| 1  | Kullanıcı olarak mesaj metni girmek istiyorum, böylece mesajın riskli olup olmadığını analiz edebilirim.                                                              | High    | Done  |
+| 2  | Kullanıcı olarak mesajdaki şüpheli linkleri görmek istiyorum, böylece linke tıklamadan önce riskleri anlayabilirim.                                                   | High    | Done  |
+| 3  | Kullanıcı olarak mesaj için bir risk skoru görmek istiyorum, böylece mesajın ne kadar tehlikeli olabileceğini anlayabilirim.                                          | High    | Done  |
+| 4  | Kullanıcı olarak mesajın neden riskli olduğunu madde madde görmek istiyorum, böylece sonucu daha kolay anlayabilirim.                                                 | High    | Done  |
+| 5  | Kullanıcı olarak güvenli aksiyon önerileri almak istiyorum, böylece şüpheli mesaj karşısında ne yapmam gerektiğini öğrenebilirim.                                     | Medium  | Done  |
+| 6  | Takım olarak sprint sürecini GitHub üzerinde belgelemek istiyoruz, böylece proje gelişimi düzenli şekilde takip edilebilir.                                           | High    | Done  |
+| 7  | Kullanıcı olarak daha detaylı bir risk analizi görmek istiyorum, böylece mesajdaki farklı dolandırıcılık sinyallerini anlayabilirim.                                  | High    | Done  |
+| 8  | Kullanıcı olarak mesajın bağlamını değerlendiren yapay zekâ destekli bir yorum görmek istiyorum, böylece yalnızca anahtar kelimelere dayanmayan bir sonuç alabilirim. | High    | Done  |
+| 9  | Kullanıcı olarak sistemin farklı güvenli ve şüpheli mesajlarla test edilmesini istiyorum, böylece analiz sonuçlarının güvenilirliğini değerlendirebilirim.            | High    | Done  |
+| 10 | Kullanıcı olarak analiz sonucunu daha anlaşılır bir arayüzde görmek istiyorum, böylece risk seviyesini ve şüpheli noktaları kolayca inceleyebilirim.                  | Medium  | Done  |
+| 11 | Kullanıcı olarak geçmiş analiz sonuçlarını görüntülemek istiyorum, böylece daha önce kontrol ettiğim mesajları yeniden inceleyebilirim.                               | High    | Done  |
+| 12 | Kullanıcı olarak analiz sonuçlarını bir dashboard üzerinde görmek istiyorum, böylece risk dağılımlarını kolayca değerlendirebilirim.                                  | Medium  | Done  |
+| 13 | Kullanıcı olarak daha fazla güvenli ve şüpheli mesaj senaryosunun test edilmesini istiyorum, böylece sistemin farklı mesaj türlerindeki davranışını görebilirim.      | High    | Done  |
+| 14 | Kullanıcı olarak uygulamaya internet üzerinden erişmek istiyorum, böylece sistemi kurulum yapmadan kullanabilirim.                                                    | High    | Done  |
+
 
 Product Backlog numaraları kullanıcı story'lerini temsil etmektedir. GitHub Issues üzerindeki numaralar ise bu story'leri gerçekleştirmek için oluşturulan geliştirme ve dokümantasyon task'lerine aittir; bu nedenle iki numaralandırma birbirinden bağımsızdır.
 
@@ -369,4 +371,108 @@ Alınan kararlar:
 
 <details>
 <summary><h1>Sprint 3</h1></summary>
+
+## Backlog Düzeni ve Story Seçimleri
+
+Backlog'umuz Sprint 3 kapsamında, Sprint 2 sonunda elde edilen gelişmiş analiz sisteminin kalıcı veri saklama, sonuçların görselleştirilmesi, test kapsamının genişletilmesi ve internet üzerinden erişilebilir hâle getirilmesine yönelik öncelikli story'lere göre düzenlenmiştir. Üçüncü sprintte amaç; analiz geçmişini ve dashboard özelliklerini ürüne eklemek, farklı mesaj senaryolarıyla sistemi doğrulamak ve uygulamayı canlıya almaktır.
+
+Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde story seçimleri yapılmıştır. Story başına çıkan tahmin puanı, toplam sprint puanının yarısından az tutulmuştur. Sprint 3 kapsamında toplam 18 puanlık çalışmanın tamamlanması hedeflenmiştir.
+
+Sprint 3 için seçilen story'ler aşağıdaki gibidir:
+
+| No | Story                                                                                                                                                            | Tahmin Puanı | Öncelik |
+| -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------: | ------- |
+| 11 | Kullanıcı olarak geçmiş analiz sonuçlarını görüntülemek istiyorum, böylece daha önce kontrol ettiğim mesajları yeniden inceleyebilirim.                          |            5 | High    |
+| 12 | Kullanıcı olarak analiz sonuçlarını bir dashboard üzerinde görmek istiyorum, böylece risk dağılımlarını kolayca değerlendirebilirim.                             |            5 | Medium  |
+| 13 | Kullanıcı olarak daha fazla güvenli ve şüpheli mesaj senaryosunun test edilmesini istiyorum, böylece sistemin farklı mesaj türlerindeki davranışını görebilirim. |            3 | High    |
+| 14 | Kullanıcı olarak uygulamaya internet üzerinden erişmek istiyorum, böylece sistemi kurulum yapmadan kullanabilirim.                                               |            5 | High    |
+
+Story'ler yapılacak işlere, yani task'lere bölünmüştür. Sprint 3 kapsamında belirlenen temel task'ler; analiz sonuçlarının SQLite veritabanına kaydedilmesi, geçmiş analizlerin listelenmesi ve temizlenmesi, toplam analiz sayısı ile ortalama risk skorunun hesaplanması, risk dağılımı ve son analizlerin dashboard üzerinde gösterilmesi, güvenli ve şüpheli mesaj senaryolarına yönelik test kapsamının genişletilmesi ve Streamlit uygulamasının internet üzerinden erişilebilir hâle getirilmesidir.
+
+---
+
+## Daily Scrum
+
+Sprint 3 başlangıcında backlog değerlendirilmiş, analiz geçmişi, dashboard, test ve canlıya alma görevleri planlanmış ve geliştirme sürecine ilişkin iletişim mesajlaşma kanalı üzerinden yürütülmüştür.
+
+Daily Scrum / sprint iletişimi ekran görüntüsü aşağıda paylaşılacaktır:
+
+![Daily Scrum](ProjectManagement/Sprint3Documents/scrum_3.png)
+
+---
+
+## Sprint Board Update
+
+Sprint board üzerinde Sprint 3 için seçilen story'ler ve bu story'lere bağlı task'ler takip edilmiştir. Analiz geçmişi, dashboard, test kapsamının genişletilmesi ve uygulamanın canlıya alınması için planlanan toplam 18 puanlık çalışma tamamlanarak Done durumuna taşınmıştır.
+
+Sprint board ekran görüntüsü aşağıda paylaşılacaktır:
+
+![Sprint Board](ProjectManagement/Sprint3Documents/backlog_3.png)
+
+---
+
+## Ürün Durumu
+
+Sprint 3 kapsamında, Sprint 2 sonunda geliştirilen risk analizi sisteminin analiz geçmişi, dashboard, genişletilmiş otomatik testler ve canlı erişim özellikleriyle tamamlanması hedeflenmiştir.
+
+Analiz sonuçlarının maskelenmiş mesaj özeti, risk skoru, risk seviyesi ve tespit edilen şüpheli noktalarla birlikte SQLite veritabanında saklanması sağlanmıştır. Dashboard ekranında toplam analiz sayısı, ortalama risk skoru, risk seviyelerinin dağılımı ve son analizler gösterilmiştir.
+
+Sprint 3 ürün çıktısı kapsamında tamamlanan özellikler:
+
+* Analiz sonuçlarının SQLite veritabanında kalıcı olarak saklanması
+* Maskelenmiş mesaj özetleriyle geçmiş analizlerin listelenmesi
+* Analiz geçmişinin kullanıcı tarafından temizlenebilmesi
+* Toplam analiz sayısının ve ortalama risk skorunun gösterilmesi
+* Risk seviyelerinin dağılımının dashboard üzerinde görselleştirilmesi
+* Son analizlerin dashboard üzerinde listelenmesi
+* Güvenli ve şüpheli mesaj senaryolarına yönelik otomatik test kapsamının genişletilmesi
+* Toplam 24 otomatik testin başarıyla tamamlanması
+* Uygulamanın Streamlit Community Cloud üzerinden canlıya alınması
+
+Canlı uygulamaya aşağıdaki bağlantıdan erişilebilir:
+
+[Scam Message Detector](https://scam-message-detector.streamlit.app)
+
+Ürün durumu ve test ekran görüntüleri aşağıda paylaşılacaktır:
+
+![Mesaj Analizi](ProjectManagement/Sprint3Documents/screenshot_3.png)
+![Analiz Geçmişi](ProjectManagement/Sprint3Documents/screenshot_3_2.png)
+![Analiz Dashboard](ProjectManagement/Sprint3Documents/screenshot_3_3.png)
+![Otomatik Test Sonuçları](ProjectManagement/Sprint3Documents/screenshot_3_4.png)
+
+---
+
+## Sprint Review
+
+Sprint Review sırasında Sprint 3 kapsamında gerçekleştirilen analiz geçmişi, dashboard, test ve canlıya alma çalışmaları değerlendirilmiştir. Sprint için planlanan toplam 18 puanlık çalışma tamamlanmıştır.
+
+Alınan kararlar:
+
+* Analiz sonuçlarının SQLite veritabanında saklanmasıyla geçmiş analizlerin yeniden incelenebilmesi sağlanmıştır.
+* Mesaj içeriğinin tamamı yerine maskelenmiş mesaj özetlerinin saklanmasına karar verilmiştir.
+* Kullanıcının analiz geçmişini temizleyebilmesi için ilgili işlev ürüne eklenmiştir.
+* Toplam analiz sayısı, ortalama risk skoru, risk dağılımı ve son analizler dashboard üzerinde gösterilmiştir.
+* Güvenli ve şüpheli mesaj senaryolarını kapsayan toplam 24 otomatik test başarıyla tamamlanmıştır.
+* Uygulama Streamlit Community Cloud üzerinden canlıya alınarak kurulum gerektirmeden erişilebilir hâle getirilmiştir.
+* Sprint 3 için belirlenen product backlog story'lerinin tamamlandığı görülmüştür.
+
+Sprint Review katılımcısı:
+
+* Şevval Köseoğlu
+
+---
+
+## Sprint Retrospective
+
+Sprint Retrospective sırasında Sprint 3 sürecindeki çalışma düzeni, teknik geliştirmeler, test süreci ve canlıya alma adımları değerlendirilmiştir.
+
+Alınan kararlar:
+
+* Analiz geçmişi ve dashboard özelliklerinin ayrı bir veri katmanı üzerinden yönetilmesinin kodun düzenini ve sürdürülebilirliğini artırdığı görülmüştür.
+* Otomatik test sayısının artırılmasının yeni geliştirmeler sonrasında mevcut analiz işlevlerinin korunmasını doğrulamak açısından faydalı olduğu belirlenmiştir.
+* API anahtarının kod içerisinde tutulmaması ve canlı ortamda secret olarak tanımlanması gerektiği doğrulanmıştır.
+* Canlıya alma öncesinde yerel testlerin tamamlanmasının deployment sürecini kolaylaştırdığı görülmüştür.
+* Sprint board'un sprint boyunca güncel tutulmasının tamamlanan işlerin ve toplam puanın izlenmesini kolaylaştırdığı değerlendirilmiştir.
+* Ürünün temel hedeflerini karşılayan çalışır ve internet üzerinden erişilebilir sürümünün tamamlandığı sonucuna varılmıştır.
+
 </details>
