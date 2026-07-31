@@ -59,18 +59,21 @@ Günümüzde kullanıcılar; sahte kargo mesajları, banka taklidi yapan SMS’l
 Ürünün mevcut sürümünde yer alan temel özellikler:
 
 * Kullanıcıdan Türkçe SMS, e-posta veya mesaj metni alma
-* Link, telefon numarası ve IBAN formatlarını tespit etme
-* Aciliyet, ödeme talebi ve kurum taklidi gibi risk sinyallerini analiz etme
-* Kişisel bilgi, kart bilgisi, şifre ve doğrulama kodu taleplerini tespit etme
-* Ödül, çekiliş, hesap kapatma, bloke ve yasal işlem ifadelerini analiz etme
-* Tekil risk sinyallerini ve birlikte kullanılan sinyal kombinasyonlarını puanlama
-* Mesaj için 0-100 arasında açıklanabilir risk skoru üretme
-* Her şüpheli noktanın risk skoruna katkısını gösterme
-* Risk seviyesine göre renkli sonuç bildirimi ve güvenli aksiyon önerisi sunma
-* Gemini 3.5 Flash ile yapay zekâ destekli bağlamsal mesaj yorumu oluşturma
-* Gemini servisine gönderilmeden önce telefon, IBAN ve uzun numaraları maskeleme
-* Yapay zekâ servisine erişilemediğinde kural tabanlı analizle çalışmaya devam etme
-* Güvenli ve şüpheli mesaj senaryolarını otomatik testlerle doğrulama
+Link, telefon numarası ve IBAN formatlarını tespit etme
+Aciliyet, ödeme talebi ve kurum taklidi gibi risk sinyallerini analiz etme
+Kişisel bilgi, kart bilgisi, şifre ve doğrulama kodu taleplerini tespit etme
+Ödül, çekiliş, hesap kapatma, bloke ve yasal işlem ifadelerini analiz etme
+Tekil risk sinyallerini ve birlikte kullanılan sinyal kombinasyonlarını puanlama
+Mesaj için 0-100 arasında açıklanabilir risk skoru üretme
+Her şüpheli noktanın risk skoruna katkısını gösterme
+Risk seviyesine göre renkli sonuç bildirimi ve güvenli aksiyon önerisi sunma
+Gemini 3.6 Flash ile yapay zekâ destekli bağlamsal mesaj yorumu oluşturma
+Gemini servisine gönderilmeden önce telefon, IBAN ve uzun numaraları maskeleme
+Yapay zekâ servisine erişilemediğinde kural tabanlı analizle çalışmaya devam etme
+Güvenli ve şüpheli mesaj senaryolarını otomatik testlerle doğrulama
+Maskelenmiş mesaj özetleriyle analiz geçmişini SQLite veritabanında saklama
+Toplam analiz, ortalama risk skoru ve risk dağılımını dashboard üzerinde gösterme
+Analiz geçmişini temizleme
 
 ---
 
