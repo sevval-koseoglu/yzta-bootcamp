@@ -361,3 +361,9 @@ Alınan kararlar:
 * API anahtarı gibi hassas bilgilerin kod içerisinde veya GitHub repository'sinde tutulmamasına dikkat edilmesine karar verilmiştir.
 * Sprint 3 kapsamında analiz geçmişi, dashboard, daha geniş test verisi ve uygulamanın canlıya alınması çalışmalarına öncelik verilmesi planlanmıştır.
 </details>
+
+---
+
+<details>
+<summary><h1>Sprint 3</h1></summary>
+</details>
