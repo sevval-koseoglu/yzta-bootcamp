@@ -4,7 +4,7 @@ import re
 from analyzer import IBAN_PATTERN, PHONE_PATTERN
 
 
-MODEL_NAME = "gemini-3.5-flash"
+MODEL_NAME = "gemini-3.6-flash"
 
 
 def redact_sensitive_data(message):
@@ -52,4 +52,7 @@ Mesaj güvenli görünse bile bunun kesin güvenlik garantisi olmadığını bel
         input=prompt,
         store=False,
     )
-    return interaction.output_text.strip()
+    output_text = interaction.output_text
+    if not output_text or not output_text.strip():
+        raise RuntimeError("Gemini boş bir yanıt döndürdü.")
+    return output_text.strip()

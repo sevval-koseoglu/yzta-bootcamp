@@ -90,17 +90,18 @@ with analysis_tab:
                         findings=findings,
                         )
                     st.markdown(ai_interpretation)
-                    st.caption("AI modeli: Gemini 3.5 Flash")
+                    st.caption("AI modeli: Gemini 3.6 Flash")
                 except ValueError:
                     st.info(
                     "Yapay zekâ yorumu için GEMINI_API_KEY tanımlanmalıdır. "
                     "Kural tabanlı analiz kullanılmaya devam ediyor."
                     )
-                except Exception:
+                except Exception as error:
                     st.warning(
                     "Yapay zekâ servisine şu anda ulaşılamadı. "
                     "Kural tabanlı analiz kullanılmaya devam ediyor."
                     )
+                    st.caption(f"Teknik neden: {type(error).__name__}: {error}")
 
 with history_tab:
     st.subheader("Analiz Geçmişi")
