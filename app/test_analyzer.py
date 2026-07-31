@@ -83,6 +83,52 @@ class AnalyzeMessageTests(unittest.TestCase):
         self.assertEqual(score, 100)
         self.assertEqual(level, "Yüksek Risk")
 
+    def test_safe_delivery_information(self):
+        self.assert_analysis("Kargonuz bugün 16.00-18.00 arasında teslim edilecektir.", 0, "Düşük Risk")
+
+    def test_safe_appointment_reminder(self):
+        self.assert_analysis("Hastane randevunuz 12 Ağustos saat 10.30'dadır.", 0, "Düşük Risk")
+
+    def test_urgent_message_without_other_signal(self):
+        self.assert_analysis("Toplantı acil olarak başka bir salona alınmıştır.", 15, "Düşük Risk")
+
+    def test_threat_alone_is_low_risk(self):
+        self.assert_analysis("Gecikme durumunda yasal işlem başlatılacaktır.", 15, "Düşük Risk")
+
+    def test_prize_link_is_medium_risk(self):
+        self.assert_analysis(
+            "Hediye kazandınız, ayrıntılar için https://hediye.example adresini açın.",
+            35,
+            "Orta Risk",
+        )
+
+    def test_fake_scholarship_payment_is_high_risk(self):
+        self.assert_analysis(
+            "Burs başvurunuz onaylandı. 24 saat içinde kayıt ücreti ödeme yapın: https://burs.example",
+            70,
+            "Yüksek Risk",
+        )
+
+    def test_fake_government_credentials_is_high_risk(self):
+        self.assert_analysis(
+            "E-devlet erişiminiz durdurulacak. Hemen https://edevlet.example üzerinden şifrenizi girin.",
+            95,
+            "Yüksek Risk",
+        )
+
+    def test_fake_tax_payment_is_high_risk(self):
+        self.assert_analysis(
+            "Vergi dairesi borcunuz için son gün. Ödeme yapın: https://vergi.example",
+            80,
+            "Yüksek Risk",
+        )
+
+    def test_iban_without_payment_request_is_low_risk(self):
+        self.assert_analysis("Kayıtlı IBAN: TR12 3456 7890 1234 5678 9012 34", 20, "Düşük Risk")
+
+    def test_uppercase_turkish_keywords_are_detected(self):
+        self.assert_analysis("ACİL ÖDEME YAPIN", 40, "Orta Risk")
+
 
 if __name__ == "__main__":
     unittest.main()
