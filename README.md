@@ -153,18 +153,6 @@ Product Backlog numaraları kullanıcı story'lerini temsil etmektedir. GitHub I
 
 ---
 
-## Definition of Done
-
-Bir çalışmanın tamamlanmış kabul edilmesi için:
-
-* İlgili özelliğin geliştirilmiş ve çalışır durumda olması
-* Gerekli testlerin başarıyla tamamlanması
-* Kodların GitHub repository'sine yüklenmesi
-* İlgili task veya story'nin Sprint Board üzerinde Done durumuna taşınması
-* Gerekli proje dokümantasyonunun güncellenmesi
-
----
-
 <details>
 <summary><h1>Sprint 1</h1></summary>
 
