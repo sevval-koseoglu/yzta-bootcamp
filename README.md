@@ -138,7 +138,7 @@ python -m unittest discover -v
 | 3  | Kullanıcı olarak mesaj için bir risk skoru görmek istiyorum, böylece mesajın ne kadar tehlikeli olabileceğini anlayabilirim.                                          | High    | Done  |
 | 4  | Kullanıcı olarak mesajın neden riskli olduğunu madde madde görmek istiyorum, böylece sonucu daha kolay anlayabilirim.                                                 | High    | Done  |
 | 5  | Kullanıcı olarak güvenli aksiyon önerileri almak istiyorum, böylece şüpheli mesaj karşısında ne yapmam gerektiğini öğrenebilirim.                                     | Medium  | Done  |
-| 6  | Takım olarak sprint sürecini GitHub üzerinde belgelemek istiyoruz, böylece proje gelişimi düzenli şekilde takip edilebilir.                                           | High    | Done  |
+| 6  | Proje yürütücüsü olarak sprint sürecini GitHub üzerinde belgelemek istiyorum, böylece proje gelişimi düzenli şekilde takip edebilirim.                                           | High    | Done  |
 | 7  | Kullanıcı olarak daha detaylı bir risk analizi görmek istiyorum, böylece mesajdaki farklı dolandırıcılık sinyallerini anlayabilirim.                                  | High    | Done  |
 | 8  | Kullanıcı olarak mesajın bağlamını değerlendiren yapay zekâ destekli bir yorum görmek istiyorum, böylece yalnızca anahtar kelimelere dayanmayan bir sonuç alabilirim. | High    | Done  |
 | 9  | Kullanıcı olarak sistemin farklı güvenli ve şüpheli mesajlarla test edilmesini istiyorum, böylece analiz sonuçlarının güvenilirliğini değerlendirebilirim.            | High    | Done  |
@@ -153,12 +153,24 @@ Product Backlog numaraları kullanıcı story'lerini temsil etmektedir. GitHub I
 
 ---
 
+## Definition of Done
+
+Bir çalışmanın tamamlanmış kabul edilmesi için:
+
+* İlgili özelliğin geliştirilmiş ve çalışır durumda olması
+* Gerekli testlerin başarıyla tamamlanması
+* Kodların GitHub repository'sine yüklenmesi
+* İlgili task veya story'nin Sprint Board üzerinde Done durumuna taşınması
+* Gerekli proje dokümantasyonunun güncellenmesi
+
+---
+
 <details>
 <summary><h1>Sprint 1</h1></summary>
 
 ## Backlog Düzeni ve Story Seçimleri
 
-Backlog'umuz Sprint 1 kapsamında öncelikli olarak yapılması gereken story'lere göre düzenlenmiştir. İlk sprintte amaç, ürünün temel yapısını kurmak ve kullanıcıdan alınan mesaj metni üzerinden basit bir risk analizi yapabilen ilk prototipi geliştirmektir.
+Backlog Sprint 1 kapsamında öncelikli olarak yapılması gereken story'lere göre düzenlenmiştir. İlk sprintte amaç, ürünün temel yapısını kurmak ve kullanıcıdan alınan mesaj metni üzerinden basit bir risk analizi yapabilen ilk prototipi geliştirmektir.
 
 Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde story seçimleri yapılmıştır. Story başına çıkan tahmin puanı, toplam sprint puanının yarısından az tutulmuştur. Sprint 1 kapsamında toplam 20 puanlık çalışma planlanmıştır.
 
@@ -178,9 +190,9 @@ Story'ler yapılacak işlere, yani task'lere bölünmüştür. Sprint 1 kapsamı
 
 ## Daily Scrum
 
-Sprint 1 sürecinde ekip içi iletişim ağırlıklı olarak mesajlaşma kanalı üzerinden yürütülmüştür.
+Sprint 1 sürecindeki iletişim ağırlıklı olarak mesajlaşma kanalı üzerinden yürütülmüştür.
 
-Bu süreçte repository paylaşımı, Scrum Master ve Product Owner rollerinin belirlenmesi, ürün fikrinin netleştirilmesi, toplantı planlaması ve ekip bilgileri formu için gerekli bilgilerin toplanması gibi konular konuşulmuştur.
+Bu süreçte repository paylaşımı, rollerin belirlenmesi, ürün fikrinin netleştirilmesi, toplantı planlaması ve gerekli proje bilgilerinin hazırlanması gibi konular ele alınmıştır.
 
 Daily Scrum / sprint iletişimi ekran görüntüsü aşağıda paylaşılmıştır:
 
@@ -220,7 +232,7 @@ Sprint 1 ürün çıktısı kapsamında hedeflenen özellikler:
 
 ## Sprint Review
 
-Sprint Review sırasında Sprint 1 kapsamında yapılan çalışmalar değerlendirilmiştir. Takım, ürün fikrini netleştirmiş ve ilk sprint için kapsamın temel risk analizi ile sınırlı tutulmasına karar vermiştir.
+Sprint Review sırasında Sprint 1 kapsamında yapılan çalışmalar değerlendirilmiştir. Ürün fikri netleştirilmiş ve ilk sprint kapsamının temel risk analiziyle sınırlı tutulmasına karar verilmiştir.
 
 Alınan kararlar:
 
@@ -228,7 +240,7 @@ Alınan kararlar:
 * İlk sprintte kapsamın temel prototip ve risk analizi akışıyla sınırlı tutulmasına karar verilmiştir.
 * Kullanıcıdan mesaj metni alınması, risk sinyallerinin tespit edilmesi ve risk skoru üretilmesi Sprint 1’in ana hedefi olarak belirlenmiştir.
 * Gelişmiş yapay zekâ açıklamaları, analiz geçmişi ve dashboard özelliklerinin sonraki sprintlerde ele alınmasına karar verilmiştir.
-* Verilerin kalıcı olarak saklanması için JSON veya SQLite kullanımının sonraki sprintte değerlendirilmesine karar verilmiştir.
+* Verilerin kalıcı olarak saklanması için JSON veya SQLite kullanımının ilerleyen sprintlerde değerlendirilmesine karar verilmiştir.
 * Çıkan ürünün ilk prototip akışında temel analiz mantığı için bir problem görülmemiştir.
 * Ekstra eklenmesi gereken özellikler sonraki sprint için backlog'a aktarılmıştır.
 
@@ -240,12 +252,12 @@ Sprint Review katılımcısı:
 
 ## Sprint Retrospective
 
-Sprint Retrospective sırasında takımın Sprint 1 sürecindeki çalışma düzeni değerlendirilmiş ve sonraki sprint için iyileştirme alanları belirlenmiştir.
+Sprint Retrospective sırasında Sprint 1 sürecindeki çalışma düzeni değerlendirilmiş ve sonraki sprint için iyileştirme alanları belirlenmiştir.
 
 Alınan kararlar:
 
-* Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
-* Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer tarafından verildiğine emin olunmalıdır.
+* Sprint görevlerinin daha küçük ve takip edilebilir parçalara ayrılmasına karar verilmiştir.
+* Tahmin puanlarının sprint planlama aşamasında daha ayrıntılı değerlendirilmesi gerektiği belirlenmiştir.
 * Daily Scrum ekran görüntülerinin daha düzenli şekilde saklanmasına karar verilmiştir.
 * Sprint board güncellemelerinin daha sık yapılması gerektiği belirlenmiştir.
 * Test mesajları için ayrılan eforun artırılmasına karar verilmiştir.
@@ -474,5 +486,4 @@ Alınan kararlar:
 * Canlıya alma öncesinde yerel testlerin tamamlanmasının deployment sürecini kolaylaştırdığı görülmüştür.
 * Sprint board'un sprint boyunca güncel tutulmasının tamamlanan işlerin ve toplam puanın izlenmesini kolaylaştırdığı değerlendirilmiştir.
 * Ürünün temel hedeflerini karşılayan çalışır ve internet üzerinden erişilebilir sürümünün tamamlandığı sonucuna varılmıştır.
-
 </details>
