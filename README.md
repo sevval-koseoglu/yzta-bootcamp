@@ -395,7 +395,7 @@ Story'ler yapılacak işlere, yani task'lere bölünmüştür. Sprint 3 kapsamı
 
 Sprint 3 başlangıcında backlog değerlendirilmiş, analiz geçmişi, dashboard, test ve canlıya alma görevleri planlanmış ve geliştirme sürecine ilişkin iletişim mesajlaşma kanalı üzerinden yürütülmüştür.
 
-Daily Scrum / sprint iletişimi ekran görüntüsü aşağıda paylaşılacaktır:
+Daily Scrum / sprint iletişimi ekran görüntüsü aşağıda paylaşılmıştır:
 
 ![Daily Scrum](ProjectManagement/Sprint3Documents/scrum_3.png)
 
