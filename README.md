@@ -148,7 +148,6 @@ python -m unittest discover -v
 | 13 | Kullanıcı olarak daha fazla güvenli ve şüpheli mesaj senaryosunun test edilmesini istiyorum, böylece sistemin farklı mesaj türlerindeki davranışını görebilirim.      | High    | Done  |
 | 14 | Kullanıcı olarak uygulamaya internet üzerinden erişmek istiyorum, böylece sistemi kurulum yapmadan kullanabilirim.                                                    | High    | Done  |
 
-
 Product Backlog numaraları kullanıcı story'lerini temsil etmektedir. GitHub Issues üzerindeki numaralar ise bu story'leri gerçekleştirmek için oluşturulan geliştirme ve dokümantasyon task'lerine aittir; bu nedenle iki numaralandırma birbirinden bağımsızdır.
 
 ---
